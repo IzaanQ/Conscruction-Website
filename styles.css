@@ -8,9 +8,13 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
 header {
     display: flex;
-    width: 95%;
+    width: 90%;
     height: 10vh;
     margin: auto;
     align-items: center;
@@ -28,6 +32,7 @@ header {
 .logo{
     font-weight: 150;
     margin-left: 10px;
+    margin-top: 7px;
 }
 
 nav{
@@ -40,7 +45,7 @@ nav{
 }
 
 .nav-link {
-    color:seagreen;
+    color: #9999;
     font-size: 18px;
     text-decoration:none;
 
@@ -53,7 +58,7 @@ nav{
 
 .presentation {
     display: flex;
-    width: 95%;
+    width: 90%;
     margin: auto;
     min-height: 80vh;
     align-items: center;
@@ -61,21 +66,80 @@ nav{
 
 .introduciton {
     flex: 1;
-    margin-left: 50px;
-    margin-right: 10px;
+    width: 90%
 }
 
 .intro-text h1{
     font-size: 44px;
+    background: linear-gradient(to right, #d3d3d3d3, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .intro-text p{
     margin-top: 1px;
     font-size: 15px;
 }
+
+.cta{
+    padding: 10px 0px 0px 0px;
+}
+
+.cta-select{
+    border: 2px solid #494949;
+    background: transparent;
+    color: #494949;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cta-add {
+    background: #494949;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 12px;
+    border: none;
+    color: white;
+    margin-left: 10px;
+}
+
 .cover{
     flex: 1;
 }
 .cover img {
     height: 60vh;
+    animation: drop 1.5s ease;
+}
+
+@keyframes drop {
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .presentation {
+        flex-direction: column;
+    }
+    .introduciton {
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size: 35px;
+    }
+    .intro-text p{
+        font-size: 17px;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px
+    }
 }
