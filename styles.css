@@ -13,7 +13,7 @@ nav{
 }
 
 .logo{
-  color:aliceblue;
+  color:#E6C304;
   letter-spacing: 5px;
   font-size: 25px;
   font-weight: bolder;
@@ -21,15 +21,19 @@ nav{
 .nav-items{
   display: flex;
   justify-content: space-around;
-  width: 30%
+  width: 40%
 }
 
 .nav-items a{
-   color:aliceblue;
+   color:white;
    text-decoration: none;
    letter-spacing: 3px;
    font-weight: bold;
    font-size: 15px;
+}
+
+.nav-items a:hover{
+  color: #E6C304;
 }
 
 .nav-items li{
@@ -54,21 +58,73 @@ body{
   transition: 0.3s ease;
 }
 
-@media screen and (max-width: 1024px){
+
+/*Start of Desktop Design*/
+@media screen and (min-width: 1024px){
   .nav-items{
-  width: 45%
-}
+  width: 45%;
+  }
+
+.call-picture{
+  width: 95px;
+  margin-left: 25%;
+  float: left;
 }
 
+.call{
+  margin-top: 20px;
+  align-items: center;
+}
+
+.phone-number{
+  margin-top: 10px;
+  margin-right: 20%;
+  float: right;
+  color: #E6C304;
+  margin-top: 6%;
+  font-size: 35px;
+}
+
+.mail-picture{
+  width: 95px;
+  margin-left: 25%;
+  float: left;
+}
+
+.email{
+  margin-top: 20px;
+  align-items: center;
+}
+
+.email-address{
+  margin-top: 10px;
+  margin-right: 20%;
+  float: right;
+  color: #E6C304;
+  margin-top: 6%;
+  font-size: 35px;
+}
+
+}
+
+
+
+/* Start of Responsive Mobile Design */
 @media screen and (max-width: 768px){
   body{
     overflow-x: hidden;
+  }
+
+ .slogan{
+    display: flex;
+    justify-content: center;
+    margin-left: 14%;
   }
   
   .nav-items{
   position: absolute;
   right: 0px;
-  height: 92vh;
+  height: 100%;
   top: 8vh;
   background-color:#002A1F;
   display: flex;
@@ -76,14 +132,21 @@ body{
   align-items: center;
   transform: translateX(100%);
   transition: transform 0.2s ease-in;
-}
+  margin-bottom: 100%;
+  
+  
+
+  }
 .nav-items li{
   opacity: 0;
 }
 .menu{
   display: block;
 }
+.logo{
+  color:white;
 }
+
 
 .nav-active{
   transform: translateX(0%)
@@ -100,6 +163,48 @@ body{
   }
 }
 
+.slogan{
+  display:flex;
+  align-items: center;
+  text-align: center;
+}
+
+.call-picture{
+  width: 95px;
+  margin-right: 2%;
+  float: left;
+}
+
+.call{
+  margin-top: 20px;
+  align-items: center;
+}
+
+.phone-number{
+  margin-top: 12%;
+  float: right;
+  color: #E6C304;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.mail-picture{
+  width: 95px;
+  margin-top: 30px;
+}
+
+.email{
+  margin-top: 20px;
+  align-items: center;
+}
+
+
+
+}
+
+
+
+/* End of Responvie Phone Design */
 .toggle .line1{
   transform: rotate(-45deg) translate(-4px, 9px);
 }
@@ -110,4 +215,82 @@ body{
 
 .toggle .line3{
   transform: rotate(45deg) translate(-3px,-9px);
+}
+
+.DJJ{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10%;
+  font-size: 250%;
+  color: #E6C304;
+}
+
+.dots{
+  display: block;
+  margin: auto;
+  width:50%;
+  height: 50%;
+  margin-top: 2%;
+}
+
+.slogan{
+  margin:0px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  font-size: 150%;
+  color:#E6C304;
+}
+
+.homepage{
+  display: block;
+  margin: auto;
+  width: 50%;
+  
+}
+
+.about{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 250%;
+  color:#E6C304;
+}
+
+.content{
+  color: #E6C304;
+  display: flex;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+.contact-module{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 90%;
+  height: auto;
+
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
